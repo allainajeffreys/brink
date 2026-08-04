@@ -1,0 +1,146 @@
+/* Shared starter styles — Clearlink Design System foundations.
+   Tokens only + minimal structure. Extend per brand in each subfolder. */
+
+:root {
+  /* Brand */
+  --cl-blue: #1990FF;
+  --cl-blue-hover: #0A73EB;
+  --cl-blue-pressed: #0F5CBE;
+
+  /* Ink + neutrals */
+  --cl-black: #000000;
+  --cl-ink: #212121;
+  --cl-ink-soft: #383D43;
+  --cl-gray-100: #F6F6F6;
+  --cl-gray-200: #E7E7E7;
+  --cl-gray-300: #D1D1D1;
+  --cl-gray-cool: #929AA5;
+  --cl-white: #FFFFFF;
+
+  /* Type */
+  --cl-font: "Poppins", system-ui, sans-serif;
+  --cl-display-weight: 200;
+  --cl-bold: 700;
+
+  /* Layout */
+  --cl-content: 1172px;
+  --cl-gutter: 134px;
+  --cl-band: 88px;
+
+  --cl-radius-card: 8px;
+  --cl-radius-pill: 999px;
+  --cl-hairline: 1px solid var(--cl-gray-200);
+  --cl-ease: 120ms ease;
+}
+
+body {
+  margin: 0;
+  padding: 0 var(--cl-gutter);
+  background: var(--cl-white);
+  color: var(--cl-ink);
+  font-family: var(--cl-font);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+header,
+footer {
+  max-width: var(--cl-content);
+  margin: 0 auto;
+  padding: var(--cl-band) 0;
+}
+
+header {
+  padding-bottom: 32px;
+}
+
+footer {
+  border-top: var(--cl-hairline);
+  color: var(--cl-gray-cool);
+  font-size: 16px;
+  line-height: 22px;
+}
+
+main {
+  max-width: var(--cl-content);
+  margin: 0 auto;
+}
+
+section {
+  padding-bottom: var(--cl-band);
+}
+
+h1 {
+  margin: 0;
+  font-size: 52px;
+  font-weight: var(--cl-display-weight);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  margin: 0 0 24px;
+  font-size: 28px;
+  font-weight: var(--cl-bold);
+  line-height: 36px;
+  color: var(--cl-ink-soft);
+}
+
+.overline {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: var(--cl-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cl-blue);
+}
+
+.lede {
+  margin: 0;
+  max-width: 640px;
+  color: var(--cl-ink-soft);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: var(--cl-hairline);
+}
+
+li {
+  border-bottom: var(--cl-hairline);
+}
+
+a {
+  display: block;
+  padding: 20px 0;
+  color: var(--cl-blue);
+  text-decoration: none;
+  transition: color var(--cl-ease);
+}
+
+a:hover {
+  color: var(--cl-blue-hover);
+}
+
+a:active {
+  color: var(--cl-blue-pressed);
+}
+
+footer a {
+  display: inline;
+  padding: 0;
+}
+
+code {
+  font-size: 14px;
+  color: var(--cl-ink-soft);
+}
+
+@media (max-width: 900px) {
+  body {
+    padding: 0 24px;
+  }
+}

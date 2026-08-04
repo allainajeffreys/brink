@@ -1,0 +1,185 @@
+/* =========================================================
+   Clearlink Design System — Colors & Type
+   ========================================================= */
+
+/* --- Fonts --------------------------------------------------- */
+@font-face { font-family: 'Poppins'; font-style: normal; font-weight: 100; font-display: swap;
+  src: url('fonts/Poppins-Thin.ttf') format('truetype'); }
+@font-face { font-family: 'Poppins'; font-style: italic; font-weight: 100; font-display: swap;
+  src: url('fonts/Poppins-ThinItalic.ttf') format('truetype'); }
+@font-face { font-family: 'Poppins'; font-style: normal; font-weight: 200; font-display: swap;
+  src: url('fonts/Poppins-ExtraLight.ttf') format('truetype'); }
+@font-face { font-family: 'Poppins'; font-style: italic; font-weight: 200; font-display: swap;
+  src: url('fonts/Poppins-ExtraLightItalic.ttf') format('truetype'); }
+@font-face { font-family: 'Poppins'; font-style: normal; font-weight: 300; font-display: swap;
+  src: url('fonts/Poppins-Light.ttf') format('truetype'); }
+@font-face { font-family: 'Poppins'; font-style: italic; font-weight: 300; font-display: swap;
+  src: url('fonts/Poppins-LightItalic.ttf') format('truetype'); }
+@font-face { font-family: 'Poppins'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('fonts/Poppins-Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Poppins'; font-style: italic; font-weight: 400; font-display: swap;
+  src: url('fonts/Poppins-Italic.ttf') format('truetype'); }
+@font-face { font-family: 'Poppins'; font-style: normal; font-weight: 500; font-display: swap;
+  src: url('fonts/Poppins-Medium.ttf') format('truetype'); }
+@font-face { font-family: 'Poppins'; font-style: italic; font-weight: 500; font-display: swap;
+  src: url('fonts/Poppins-MediumItalic.ttf') format('truetype'); }
+@font-face { font-family: 'Poppins'; font-style: normal; font-weight: 600; font-display: swap;
+  src: url('fonts/Poppins-SemiBold.ttf') format('truetype'); }
+@font-face { font-family: 'Poppins'; font-style: italic; font-weight: 600; font-display: swap;
+  src: url('fonts/Poppins-SemiBoldItalic.ttf') format('truetype'); }
+@font-face { font-family: 'Poppins'; font-style: normal; font-weight: 700; font-display: swap;
+  src: url('fonts/Poppins-Bold.ttf') format('truetype'); }
+@font-face { font-family: 'Poppins'; font-style: italic; font-weight: 700; font-display: swap;
+  src: url('fonts/Poppins-BoldItalic.ttf') format('truetype'); }
+@font-face { font-family: 'Poppins'; font-style: normal; font-weight: 800; font-display: swap;
+  src: url('fonts/Poppins-ExtraBold.ttf') format('truetype'); }
+@font-face { font-family: 'Poppins'; font-style: italic; font-weight: 800; font-display: swap;
+  src: url('fonts/Poppins-ExtraBoldItalic.ttf') format('truetype'); }
+@font-face { font-family: 'Poppins'; font-style: normal; font-weight: 900; font-display: swap;
+  src: url('fonts/Poppins-Black.ttf') format('truetype'); }
+@font-face { font-family: 'Poppins'; font-style: italic; font-weight: 900; font-display: swap;
+  src: url('fonts/Poppins-BlackItalic.ttf') format('truetype'); }
+
+:root {
+  /* --- Brand colors ------------------------------------------ */
+  --cl-blue:        #1990FF; /* Clearlink Blue — primary brand */
+  --cl-blue-600:    #0A73EB; /* Hover / pressed, links on light */
+  --cl-blue-700:    #0F5CBE; /* Deeper accent, selected state */
+
+  /* --- Secondary brand: Navy (from clearlink.com theme-color) - */
+  --cl-navy:        #000D71; /* Deep brand navy — theme-color, dark hero fields, NextConnect */
+  --cl-navy-700:    #060F52; /* Navy shade for gradients / pressed */
+  --cl-navy-050:    #EDEFF9; /* Navy tint — subtle section wash */
+
+  /* --- Neutrals (light) -------------------------------------- */
+  --cl-white:       #FFFFFF;
+  --cl-gray-50:     #F6F6F6; /* Subtle backgrounds, dividers */
+  --cl-gray-200:    #E7E7E7; /* Hairlines, card borders */
+  --cl-gray-400:    #D1D1D1; /* Disabled fills, input borders */
+  --cl-gray-500:    #929AA5; /* Secondary / footer text (from Figma) */
+  --cl-gray-700:    #383D43; /* Body on cards (from Figma) */
+
+  /* --- Darks ------------------------------------------------- */
+  --cl-black:       #000000; /* Footer + dark sections */
+  --cl-ink-900:     #212121; /* Alt dark background */
+  --cl-ink-800:     #3D3D3D; /* Alt dark surface */
+
+  /* --- Semantic: foreground --------------------------------- */
+  --fg-strong:      var(--cl-black);      /* H1/H2 on white */
+  --fg-default:     var(--cl-ink-800);    /* Body text */
+  --fg-muted:       var(--cl-gray-500);   /* Secondary, footer links */
+  --fg-on-dark:     var(--cl-white);      /* Text on black/ink bg */
+  --fg-on-dark-muted: var(--cl-gray-400);
+  --fg-brand:       var(--cl-blue);
+  --fg-link:        var(--cl-blue);
+
+  /* --- Semantic: background --------------------------------- */
+  --bg-canvas:      var(--cl-white);      /* Page background */
+  --bg-subtle:      var(--cl-gray-50);    /* Alternating sections */
+  --bg-dark:        var(--cl-black);      /* Dark sections, footer */
+  --bg-dark-alt:    var(--cl-ink-900);
+  --bg-navy:        var(--cl-navy);       /* Deep navy hero / NextConnect sections */
+  --bg-brand:       var(--cl-blue);
+  --bg-brand-hover: var(--cl-blue-600);
+  --bg-brand-press: var(--cl-blue-700);
+
+  /* --- Borders ---------------------------------------------- */
+  --border-subtle:  var(--cl-gray-200);
+  --border-strong:  var(--cl-gray-400);
+  --border-on-dark: rgba(255,255,255,0.25);
+
+  /* --- Type — family ---------------------------------------- */
+  --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* --- Type — weights (Clearlink uses the extremes) --------- */
+  --fw-extralight: 200; /* @kind font */ /* display headlines */
+  --fw-light:      300; /* @kind font */ /* alt display, section headers */
+  --fw-regular:    400; /* @kind font */ /* body */
+  --fw-medium:     500; /* @kind font */ /* UI labels */
+  --fw-bold:       700; /* @kind font */ /* emphasis headlines, button text */
+
+  /* --- Type — display / hero -------------------------------- */
+  --display-1-size: 64px;  --display-1-lh: 72px;  --display-1-ls: -0.02em;
+  --display-2-size: 52px;  --display-2-lh: 60px;  --display-2-ls: -0.01em;
+
+  /* --- Type — headings -------------------------------------- */
+  --h1-size: 48px; --h1-lh: 56px; --h1-ls: -0.01em;
+  --h2-size: 40px; --h2-lh: 48px; --h2-ls: -0.01em;
+  --h3-size: 32px; --h3-lh: 40px; --h3-ls: -0.005em;
+  --h4-size: 28px; --h4-lh: 36px; --h4-ls: -0.005em;
+  --h5-size: 24px; --h5-lh: 32px; --h5-ls: -0.005em;
+  --h6-size: 20px; --h6-lh: 28px; --h6-ls: 0; /* @kind spacing */
+
+  /* --- Type — body ------------------------------------------ */
+  --body-lg-size: 20px; --body-lg-lh: 30px;
+  --body-size:    18px; --body-lh: 26px;
+  --body-sm-size: 16px; --body-sm-lh: 22px;
+  --caption-size: 14px; --caption-lh: 20px;
+  --overline-size: 12px; --overline-lh: 16px; --overline-ls: 0.08em;
+
+  /* --- Radii, shadows, spacing ------------------------------ */
+  --radius-sm: 4px;          /* Inputs, small chips */
+  --radius-md: 8px;          /* Cards */
+  --radius-lg: 12px;         /* Larger surfaces */
+  --radius-pill: 999px;      /* DEFAULT for all CTA buttons */
+  --radius-button: 999px;    /* Alias — buttons are pill-shaped */
+
+  --shadow-sm:  0 1px 2px rgba(0,0,0,0.06), 0 1px 1px rgba(0,0,0,0.04);
+  --shadow-md:  0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg:  0 12px 32px rgba(0,0,0,0.12);
+
+  --space-1: 4px;  --space-2: 8px;  --space-3: 12px;  --space-4: 16px;
+  --space-5: 24px; --space-6: 32px; --space-7: 48px;  --space-8: 64px;
+  --space-9: 88px; --space-10: 128px;
+
+  --container-max: 1172px;   /* Content column from Figma */
+  --container-pad: 134px;    /* Desktop gutter from Figma (1440 width) */
+}
+
+/* =========================================================
+   Base elements — opinionated so utility classes stay thin
+   ========================================================= */
+html, body { background: var(--bg-canvas); color: var(--fg-default);
+  font-family: var(--font-sans); font-weight: var(--fw-regular);
+  font-size: var(--body-size); line-height: var(--body-lh);
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+/* Clearlink headline voice: ExtraLight default, Bold when emphatic. */
+h1, .h1 { font: var(--fw-extralight) var(--h1-size)/var(--h1-lh) var(--font-sans);
+  letter-spacing: var(--h1-ls); color: var(--fg-strong); margin: 0; text-wrap: balance; }
+h2, .h2 { font: var(--fw-extralight) var(--h2-size)/var(--h2-lh) var(--font-sans);
+  letter-spacing: var(--h2-ls); color: var(--fg-strong); margin: 0; text-wrap: balance; }
+h3, .h3 { font: var(--fw-bold) var(--h3-size)/var(--h3-lh) var(--font-sans);
+  letter-spacing: var(--h3-ls); color: var(--fg-strong); margin: 0; }
+h4, .h4 { font: var(--fw-bold) var(--h4-size)/var(--h4-lh) var(--font-sans);
+  letter-spacing: var(--h4-ls); color: var(--fg-strong); margin: 0; }
+h5, .h5 { font: var(--fw-bold) var(--h5-size)/var(--h5-lh) var(--font-sans);
+  letter-spacing: var(--h5-ls); color: var(--fg-strong); margin: 0; }
+h6, .h6 { font: var(--fw-bold) var(--h6-size)/var(--h6-lh) var(--font-sans);
+  letter-spacing: var(--h6-ls); color: var(--fg-strong); margin: 0; }
+
+.display-1 { font: var(--fw-extralight) var(--display-1-size)/var(--display-1-lh) var(--font-sans);
+  letter-spacing: var(--display-1-ls); color: var(--fg-strong); text-wrap: balance; }
+.display-2 { font: var(--fw-extralight) var(--display-2-size)/var(--display-2-lh) var(--font-sans);
+  letter-spacing: var(--display-2-ls); color: var(--fg-strong); text-wrap: balance; }
+
+p, .body { font-size: var(--body-size); line-height: var(--body-lh); margin: 0; text-wrap: pretty; }
+.body-lg { font-size: var(--body-lg-size); line-height: var(--body-lg-lh); }
+.body-sm { font-size: var(--body-sm-size); line-height: var(--body-sm-lh); }
+.caption { font-size: var(--caption-size); line-height: var(--caption-lh); color: var(--fg-muted); }
+.overline { font-size: var(--overline-size); line-height: var(--overline-lh);
+  letter-spacing: var(--overline-ls); text-transform: uppercase; font-weight: var(--fw-bold);
+  color: var(--fg-muted); }
+
+a { color: var(--fg-link); text-decoration: none; transition: color 120ms ease; }
+a:hover { color: var(--cl-blue-600); }
+a:active { color: var(--cl-blue-700); }
+
+.on-dark { color: var(--fg-on-dark); }
+.on-dark a { color: var(--cl-white); }
+.on-dark a:hover { color: var(--cl-blue); }
+
+/* Shared container */
+.cl-container { width: 100%; max-width: var(--container-max); margin: 0 auto;
+  padding-left: var(--space-5); padding-right: var(--space-5); }
+@media (min-width: 1200px) { .cl-container { padding-left: 0; padding-right: 0; } }

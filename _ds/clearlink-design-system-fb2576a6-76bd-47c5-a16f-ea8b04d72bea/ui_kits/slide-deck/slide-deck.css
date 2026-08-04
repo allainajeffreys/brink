@@ -1,0 +1,155 @@
+/* =========================================================
+   Clearlink Slide Deck — slide-level styles
+   Designed at 1920×1080
+   ========================================================= */
+@import url('../../colors_and_type.css');
+
+deck-stage { --slide-w: 1920px; --slide-h: 1080px; background: #1a1a1a; }
+
+/* Frame shared by all slides */
+.slide {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  background: #fff;
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.slide.dark { background: #000; color: #fff; }
+
+/* Confidential header — top-left of every slide, letter-spaced */
+.slide-chrome-top,
+.slide-chrome-bottom {
+  position: absolute;
+  left: 80px; right: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: #929AA5;
+  text-transform: uppercase;
+}
+.slide-chrome-top { top: 48px; }
+.slide-chrome-bottom { bottom: 48px; }
+.dark .slide-chrome-top, .dark .slide-chrome-bottom { color: rgba(255,255,255,0.55); }
+.slide-pn { font-variant-numeric: tabular-nums; }
+
+/* Logo lock-up in chrome */
+.slide-chrome-logo { height: 22px; opacity: 0.9; }
+.dark .slide-chrome-logo { filter: brightness(0) invert(1); }
+
+/* Generic content well */
+.slide-body {
+  position: absolute;
+  inset: 140px 134px 140px 134px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ----- Headlines (slide-scale) ----- */
+.s-display { font-weight: 200; font-size: 120px; line-height: 1.05;
+  letter-spacing: -0.02em; margin: 0; color: inherit; }
+.s-h1 { font-weight: 200; font-size: 88px;  line-height: 1.1;
+  letter-spacing: -0.015em; margin: 0; color: inherit; }
+.s-h2 { font-weight: 200; font-size: 64px;  line-height: 1.15;
+  letter-spacing: -0.01em; margin: 0; color: inherit; }
+.s-h3 { font-weight: 700; font-size: 40px;  line-height: 1.2;
+  letter-spacing: -0.005em; margin: 0; color: inherit; }
+.s-h4 { font-weight: 700; font-size: 28px;  line-height: 1.25;
+  letter-spacing: 0.04em; text-transform: uppercase; margin: 0; color: inherit; }
+.s-body { font-weight: 400; font-size: 26px; line-height: 1.5; margin: 0; color: inherit; }
+.s-body-sm { font-weight: 400; font-size: 20px; line-height: 1.45; margin: 0; color: inherit; }
+.s-eyebrow {
+  font-weight: 700; font-size: 18px; line-height: 1; letter-spacing: 0.16em;
+  text-transform: uppercase; color: #1990FF; margin: 0;
+}
+.s-stat-num { font-weight: 200; font-size: 144px; line-height: 1; letter-spacing: -0.02em; color: #1990FF; margin: 0; }
+.s-stat-cap { font-weight: 700; font-size: 18px; letter-spacing: 0.1em; text-transform: uppercase; color: #383D43; margin: 0; }
+.dark .s-stat-cap { color: rgba(255,255,255,0.85); }
+
+/* ----- Hero/section-divider helpers ----- */
+.slide-center {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; padding: 0 200px;
+}
+
+/* ----- Title block bottom-left ----- */
+.title-block { position: absolute; left: 134px; bottom: 134px; max-width: 1200px; }
+
+/* ----- Grids ----- */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 48px; }
+.grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 32px; }
+
+/* ----- Service / metadata card ----- */
+.fact { display: flex; flex-direction: column; gap: 16px; }
+.fact-num { font-weight: 200; font-size: 72px; line-height: 1; color: #1990FF; letter-spacing: -0.02em; }
+.fact-label { font-weight: 700; font-size: 22px; line-height: 1.3; color: #000; }
+.fact-sub { font-size: 18px; color: #383D43; line-height: 1.45; }
+.dark .fact-label { color: #fff; }
+.dark .fact-sub { color: rgba(255,255,255,0.75); }
+
+/* ----- Numbered step ----- */
+.step-num {
+  font-weight: 200; font-size: 96px; line-height: 1; color: #1990FF;
+  letter-spacing: -0.02em; margin-bottom: 16px;
+}
+
+/* ----- Inline divider ----- */
+.rule { height: 2px; background: #E7E7E7; margin: 32px 0; border: none; width: 80px; }
+.rule-blue { height: 2px; background: #1990FF; margin: 0 0 24px; border: none; width: 64px; }
+.dark .rule { background: rgba(255,255,255,0.25); }
+
+/* ----- Pill on dark ----- */
+.pill {
+  display: inline-block;
+  border: 2px solid #1990FF;
+  color: #1990FF;
+  border-radius: 999px;
+  padding: 6px 18px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ----- Quote ----- */
+.s-quote {
+  font-weight: 200; font-size: 72px; line-height: 1.15;
+  letter-spacing: -0.01em; color: inherit; margin: 0; text-wrap: balance;
+}
+.s-quote-byline {
+  margin-top: 48px;
+  font-weight: 700; font-size: 18px; letter-spacing: 0.16em;
+  text-transform: uppercase; color: #1990FF;
+}
+.s-quote-byline span { display: block; color: #929AA5; font-weight: 400; margin-top: 6px; letter-spacing: 0.04em; }
+
+/* ----- Logo strip ----- */
+.logo-strip {
+  display: grid; grid-template-columns: repeat(6, 1fr); gap: 48px 64px;
+  align-items: center; justify-items: center;
+}
+.logo-strip .logo-tile {
+  height: 60px; width: 180px; background: #F6F6F6; border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  color: #929AA5; font-weight: 700; font-size: 14px; letter-spacing: 0.06em;
+}
+
+/* ----- Table ----- */
+.s-table { width: 100%; border-collapse: collapse; }
+.s-table th, .s-table td {
+  text-align: left; padding: 20px 24px;
+  font-size: 22px; color: #383D43;
+  border-bottom: 1px solid #E7E7E7;
+}
+.s-table th { font-weight: 700; font-size: 18px; letter-spacing: 0.08em; text-transform: uppercase; color: #000; }
+.s-table td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.s-table tr.total td { font-weight: 700; color: #000; border-bottom: 2px solid #1990FF; }
